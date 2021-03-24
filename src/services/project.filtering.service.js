@@ -3,7 +3,7 @@ import axios from "axios";
 function getProjectsByEngineerIDAndFilter(userId, params, page) {
     return axios
         .get(
-            "http://localhost:8081/api/projects/filter/getProjectsWithDesignEngineersByEngineerID/" +
+            "https://peri-backend-6b9ca.ondigitalocean.app/api/projects/filter/getProjectsWithDesignEngineersByEngineerID/" +
                 userId +
                 "/page/" +
                 page,

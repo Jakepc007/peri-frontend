@@ -4,7 +4,7 @@ import authHeader from "./auth-header";
 import authService from "./auth.service";
 
 //TODO Remove junk file and add auth header to requests.
-const API_URL = "http://localhost:8081/api/auth/";
+const API_URL = "https://peri-backend-6b9ca.ondigitalocean.app/api/auth/";
 
 const getPublicContent = () => {
     return axios.get(API_URL + "all");
@@ -25,12 +25,12 @@ const getAdminBoard = () => {
 
 const getUserRequests = () => {
     const { id } = authService.getCurrentUser()
-    return axios.get(`http://localhost:8081/api/users/getRequests/${id}`)
+    return axios.get(`https://peri-backend-6b9ca.ondigitalocean.app/api/users/getRequests/${id}`)
 }
 
-const approveRequest = requestId => axios.get(`http://localhost:8081/api/users/approveRequest/${requestId}`) 
+const approveRequest = requestId => axios.get(`https://peri-backend-6b9ca.ondigitalocean.app/api/users/approveRequest/${requestId}`) 
 
-const declineRequest = requestId => axios.get(`http://localhost:8081/api/users/declineRequest/${requestId}`) 
+const declineRequest = requestId => axios.get(`https://peri-backend-6b9ca.ondigitalocean.app/api/users/declineRequest/${requestId}`) 
 
 export default {
     getPublicContent,

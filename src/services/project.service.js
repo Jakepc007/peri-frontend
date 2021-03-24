@@ -3,7 +3,7 @@ import axios from "axios";
 function getDesignerProjects(userId) {
     return axios
         .get(
-            "http://localhost:8081/api/projects/getProjectsByDesigner/" + userId
+            "https://peri-backend-6b9ca.ondigitalocean.app/api/projects/getProjectsByDesigner/" + userId
         )
         .then(function (response) {
             return response.data.data;
@@ -16,7 +16,7 @@ function getDesignerProjects(userId) {
 function getTechnicalProjects(userId) {
     return axios
         .get(
-            "http://localhost:8081/api/projects/getProjectsByTechnicalLead/" +
+            "https://peri-backend-6b9ca.ondigitalocean.app/api/projects/getProjectsByTechnicalLead/" +
                 userId
         )
         .then(function (response) {
@@ -30,7 +30,7 @@ function getTechnicalProjects(userId) {
 function getProjectsWithDesignEngineersByEngineerID(engineerId) {
     return axios
         .get(
-            "http://localhost:8081/api/projects/getProjectsWithDesignEngineersByEngineerID/" +
+            "https://peri-backend-6b9ca.ondigitalocean.app/api/projects/getProjectsWithDesignEngineersByEngineerID/" +
                 engineerId
         )
         .then(function (response) {
@@ -43,7 +43,7 @@ function getProjectsWithDesignEngineersByEngineerID(engineerId) {
 
 function getProjectByID(projectId) {
     return axios
-        .get("http://localhost:8081/api/projects/getProjectByID/" + projectId)
+        .get("https://peri-backend-6b9ca.ondigitalocean.app/api/projects/getProjectByID/" + projectId)
         .then(function (response) {
             return response.data.data;
         })
@@ -55,7 +55,7 @@ function getProjectByID(projectId) {
 function updateProjectStatus(projectId, status) {
     return axios
         .put(
-            "http://localhost:8081/api/projects/updateProjectStatus/" +
+            "https://peri-backend-6b9ca.ondigitalocean.app/api/projects/updateProjectStatus/" +
                 projectId +
                 "/" +
                 status
@@ -71,7 +71,7 @@ function updateProjectStatus(projectId, status) {
 function updateProjectDesignEngineer(projectId, engineerId) {
     return axios
         .put(
-            "http://localhost:8081/api/projects/updateProjectDesignEngineer/" +
+            "https://peri-backend-6b9ca.ondigitalocean.app/api/projects/updateProjectDesignEngineer/" +
                 projectId +
                 "/" +
                 engineerId
@@ -87,7 +87,7 @@ function updateProjectDesignEngineer(projectId, engineerId) {
 function updateProjectApproval(projectId, approvedStatus) {
     return axios
         .put(
-            "http://localhost:8081/api/projects/updateProjectApproval/" +
+            "https://peri-backend-6b9ca.ondigitalocean.app/api/projects/updateProjectApproval/" +
             projectId +
             "/" +
             approvedStatus
@@ -103,7 +103,7 @@ function updateProjectApproval(projectId, approvedStatus) {
 function updateProjectDesignChecker(projectId, engineerId) {
     return axios
         .put(
-            "http://localhost:8081/api/projects/updateProjectDesignChecker/" +
+            "https://peri-backend-6b9ca.ondigitalocean.app/api/projects/updateProjectDesignChecker/" +
                 projectId +
                 "/" +
                 engineerId
@@ -117,7 +117,7 @@ function updateProjectDesignChecker(projectId, engineerId) {
 }
 
 const sendMail = (projects, email, name) => {
-    return axios.post("http://localhost:8081/api/sendmail", {
+    return axios.post("https://peri-backend-6b9ca.ondigitalocean.app/api/sendmail", {
         projects,
         email,
         name,
@@ -132,7 +132,7 @@ const sendMail = (projects, email, name) => {
 function getPendingRequestsWithDesignCheckerID(engineerId) {
     return axios
         .get(
-            "http://localhost:8081/api/projects/getProjectsByDesignerEngineerWhereApprovedIsPending/" +
+            "https://peri-backend-6b9ca.ondigitalocean.app/api/projects/getProjectsByDesignerEngineerWhereApprovedIsPending/" +
             engineerId
         )
         .then(function (response) {
