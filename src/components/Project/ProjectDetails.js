@@ -40,7 +40,7 @@ const ProjectDetails = (props) => {
                                             <Heading as="h4" size="md">
                                                 Due
                                             </Heading>
-                                        p    <Text>
+                                            <Text>
                                                 {new Date(
                                                     project.date_required
                                                 ).toLocaleDateString()}
