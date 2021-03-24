@@ -2,11 +2,12 @@ import React from "react";
 import "./App.css";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Redirect,
     Route,
     Switch,
 } from "react-router-dom";
+
 import Login from "./components/Authentication/Login";
 import Register from "./components/Admin/Register/Register";
 import PeriNavbar from "./layout/PeriNavbar";
